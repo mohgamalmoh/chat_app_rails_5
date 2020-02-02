@@ -9,9 +9,9 @@
 
   <body>
     <%= yield %>
-    <h3>message 1</h3>
-    <h3>message 2</h3>
-    <h3>message 3</h3>
+
+    <%= render @messages %>
+
 
     <form>
       <input type="text" name="message">
