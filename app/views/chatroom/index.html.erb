@@ -12,12 +12,16 @@
 
     <%= render @messages %>
 
-
-    <form>
-      <input type="text" name="message">
-      <input type="submit"/>
-    </form>
+      <form>
+        <input type="text" name="message">
+        <input type="submit"/>
+      </form>
 
     <%= link_to 'Home', '/' %>
   </body>
+  <% if logged_in?%>
+    <%= link_to "logout" , logout_path , method: :delete %>
+  <%else %>
+    <%= link_to "login" , login_path , method: :get %>
+  <%end %>
 </html>
