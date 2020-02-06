@@ -58,4 +58,8 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+    # use the following when using development environment on cloud based environment to switch off the checks on the calls origin as it is coming all from developers
+    # config.action_cable.disable_request_forgery_protection = true
+    # use the following on production server to allow sockets connections to my application's route
+    #config.action_cable.allowed_request_origins = ['https://www.mychatapp.com']
 end

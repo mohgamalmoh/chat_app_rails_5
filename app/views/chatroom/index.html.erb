@@ -12,10 +12,12 @@
 
     <%= render @messages %>
 
-      <form>
-        <input type="text" name="message">
-        <input type="submit"/>
-      </form>
+    <%= form_with( url: message_path , method: "POST") do |f| %>
+
+        <%= f.text_field :message %>
+        <%= f.text_field :body %>
+       <input type="submit"/>
+    <%end %>
 
     <%= link_to 'Home', '/' %>
   </body>
